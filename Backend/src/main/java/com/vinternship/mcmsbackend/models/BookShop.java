@@ -1,8 +1,13 @@
 package com.vinternship.mcmsbackend.models;
 
+import org.springframework.data.annotation.Id;
+
 import java.util.Arrays;
 
 public class BookShop {
+    @Id
+    private  String id;
+    private String title;
     private String shop_name;
     private String shop_number;
     private String location;
@@ -10,13 +15,31 @@ public class BookShop {
     private int contact_no;
     private String email;
 
-    public BookShop(String shop_name, String shop_number, String location, Book[] books, int contact_no, String email) {
+    public BookShop(String id,String title ,String shop_name, String shop_number, String location, Book[] books, int contact_no, String email) {
+        this.id = id;
+        this.title = title;
         this.shop_name = shop_name;
         this.shop_number = shop_number;
         this.location = location;
         this.books = books;
         this.contact_no = contact_no;
         this.email = email;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getShop_name() {

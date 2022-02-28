@@ -15,13 +15,13 @@ public class Author {
     private int age;
     private String phone;
     private String email;
-    private List<String> genre;
+    private List<Genre> genre;
     @CreatedDate
     private Date registration;
 
     // public Author() {}
 
-    public Author(String id, String name, int age, String phone, String email, List<String> genre, Date registration) {
+    public Author(String id, String name, int age, String phone, String email, List<Genre> genre, Date registration) {
         this.id = id;
         this.name = name;
         this.age = age;
@@ -67,11 +67,11 @@ public class Author {
         this.email = email;
     }
 
-    public List<String> getGenre() {
+    public List<Genre> getGenre() {
         return genre;
     }
 
-    public void setGenre(List<String> genre) {
+    public void setGenre(List<Genre> genre) {
         this.genre = genre;
     }
 
